@@ -1,0 +1,222 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>35. Unix 专有服务 &#8212; Python 3.6.8 文档</title>
+    <link rel="stylesheet" href="../_static/pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3.6/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" tppabs="https://docs.python.org/zh-cn/3.6/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/sidebar.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.6.8 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="35.1. posix — The most common POSIX system calls" href="posix.html" />
+    <link rel="prev" title="34.4. winsound — Sound-playing interface for Windows" href="winsound.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/unix.html" />
+    
+    <script type="text/javascript" src="../_static/copybutton.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/switchers.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/switchers.js"></script>
+    
+    
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/genindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/genindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/py-modindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/py-modindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="posix.html" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html" title="35.1. posix — The most common POSIX system calls"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/library/winsound.html  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/library/winsound.html%27" tppabs="https://docs.python.org/zh-cn/3.6/library/winsound.html" title="34.4. winsound — Sound-playing interface for Windows"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="../_static/py.png" tppabs="https://docs.python.org/zh-cn/3.6/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm(%27https://www.python.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/%27" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.6.8</span>
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/index.html%27" tppabs="https://docs.python.org/zh-cn/3.6/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3.6/library/index.html" accesskey="U">Python 标准库</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3.6/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="unix-specific-services">
+<span id="unix"></span><h1>35. Unix 专有服务<a class="headerlink" href="#unix-specific-services" title="永久链接至标题">¶</a></h1>
+<p>本章描述的模块提供了 Unix 操作系统独有特性的接口，在某些情况下也适用于它的某些或许多衍生版。 以下为模块概览：</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="posix.html" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html">35.1. <code class="docutils literal notranslate"><span class="pre">posix</span></code> — The most common POSIX system calls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="posix.html#large-file-support" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html#large-file-support">35.1.1. Large File Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posix.html#notable-module-contents" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html#notable-module-contents">35.1.2. Notable Module Contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/library/pwd.html  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/library/pwd.html%27" tppabs="https://docs.python.org/zh-cn/3.6/library/pwd.html">35.2. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> — 用户密码数据库</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spwd.html" tppabs="https://docs.python.org/zh-cn/3.6/library/spwd.html">35.3. <code class="docutils literal notranslate"><span class="pre">spwd</span></code> — The shadow password database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="grp.html" tppabs="https://docs.python.org/zh-cn/3.6/library/grp.html">35.4. <code class="docutils literal notranslate"><span class="pre">grp</span></code> — The group database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crypt.html" tppabs="https://docs.python.org/zh-cn/3.6/library/crypt.html">35.5. <code class="docutils literal notranslate"><span class="pre">crypt</span></code> — Function to check Unix passwords</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#hashing-methods" tppabs="https://docs.python.org/zh-cn/3.6/library/crypt.html#hashing-methods">35.5.1. Hashing Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#module-attributes" tppabs="https://docs.python.org/zh-cn/3.6/library/crypt.html#module-attributes">35.5.2. Module Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#module-functions" tppabs="https://docs.python.org/zh-cn/3.6/library/crypt.html#module-functions">35.5.3. 模块函数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypt.html#examples" tppabs="https://docs.python.org/zh-cn/3.6/library/crypt.html#examples">35.5.4. 示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="termios.html" tppabs="https://docs.python.org/zh-cn/3.6/library/termios.html">35.6. <code class="docutils literal notranslate"><span class="pre">termios</span></code> — POSIX style tty control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="termios.html#example" tppabs="https://docs.python.org/zh-cn/3.6/library/termios.html#example">35.6.1. 示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tty.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tty.html">35.7. <code class="docutils literal notranslate"><span class="pre">tty</span></code> — 终端控制功能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pty.html" tppabs="https://docs.python.org/zh-cn/3.6/library/pty.html">35.8. <code class="docutils literal notranslate"><span class="pre">pty</span></code> — Pseudo-terminal utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pty.html#example" tppabs="https://docs.python.org/zh-cn/3.6/library/pty.html#example">35.8.1. 示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fcntl.html" tppabs="https://docs.python.org/zh-cn/3.6/library/fcntl.html">35.9. <code class="docutils literal notranslate"><span class="pre">fcntl</span></code> — The <code class="docutils literal notranslate"><span class="pre">fcntl</span></code> and <code class="docutils literal notranslate"><span class="pre">ioctl</span></code> system calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipes.html" tppabs="https://docs.python.org/zh-cn/3.6/library/pipes.html">35.10. <code class="docutils literal notranslate"><span class="pre">pipes</span></code> — Interface to shell pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pipes.html#template-objects" tppabs="https://docs.python.org/zh-cn/3.6/library/pipes.html#template-objects">35.10.1. Template Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resource.html" tppabs="https://docs.python.org/zh-cn/3.6/library/resource.html">35.11. <code class="docutils literal notranslate"><span class="pre">resource</span></code> — Resource usage information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#resource-limits" tppabs="https://docs.python.org/zh-cn/3.6/library/resource.html#resource-limits">35.11.1. Resource Limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resource.html#resource-usage" tppabs="https://docs.python.org/zh-cn/3.6/library/resource.html#resource-usage">35.11.2. Resource Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nis.html" tppabs="https://docs.python.org/zh-cn/3.6/library/nis.html">35.12. <code class="docutils literal notranslate"><span class="pre">nis</span></code> — Interface to Sun’s NIS (Yellow Pages)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syslog.html" tppabs="https://docs.python.org/zh-cn/3.6/library/syslog.html">35.13. Unix syslog 库例程</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="syslog.html#examples" tppabs="https://docs.python.org/zh-cn/3.6/library/syslog.html#examples">35.13.1. 示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="syslog.html#simple-example" tppabs="https://docs.python.org/zh-cn/3.6/library/syslog.html#simple-example">35.13.1.1. Simple example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/library/winsound.html  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/library/winsound.html%27" tppabs="https://docs.python.org/zh-cn/3.6/library/winsound.html"
+                        title="上一章">34.4. <code class="docutils literal notranslate"><span class="pre">winsound</span></code> — Sound-playing interface for Windows</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="posix.html" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html"
+                        title="下一章">35.1. <code class="docutils literal notranslate"><span class="pre">posix</span></code> — The most common POSIX system calls</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/bugs.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/bugs.html%27" tppabs="https://docs.python.org/zh-cn/3.6/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm(%27https://github.com/python/cpython/blob/3.6/Doc/library/unix.rst  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/python/cpython/blob/3.6/Doc/library/unix.rst%27" tppabs="https://github.com/python/cpython/blob/3.6/Doc/library/unix.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/genindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/genindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/py-modindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/py-modindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="posix.html" tppabs="https://docs.python.org/zh-cn/3.6/library/posix.html" title="35.1. posix — The most common POSIX system calls"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/library/winsound.html  \n\nThis file was not retrieved by Teleport Ultra, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/library/winsound.html%27" tppabs="https://docs.python.org/zh-cn/3.6/library/winsound.html" title="34.4. winsound — Sound-playing interface for Windows"
+             >上一页</a> |</li>
+        <li><img src="../_static/py.png" tppabs="https://docs.python.org/zh-cn/3.6/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm(%27https://www.python.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/%27" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.6.8</span>
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/index.html%27" tppabs="https://docs.python.org/zh-cn/3.6/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3.6/library/index.html" >Python 标准库</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3.6/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/copyright.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/copyright.html%27" tppabs="https://docs.python.org/zh-cn/3.6/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm(%27https://www.python.org/psf/donations/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/psf/donations/%27" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 5月 17, 2019.
+    <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/bugs.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/bugs.html%27" tppabs="https://docs.python.org/zh-cn/3.6/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm(%27http://sphinx.pocoo.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://sphinx.pocoo.org/%27" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

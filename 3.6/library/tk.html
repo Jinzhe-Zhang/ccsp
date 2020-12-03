@@ -1,0 +1,322 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>25. Tk图形用户界面(GUI) &#8212; Python 3.6.8 文档</title>
+    <link rel="stylesheet" href="../_static/pydoctheme.css" tppabs="https://docs.python.org/zh-cn/3.6/_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" tppabs="https://docs.python.org/zh-cn/3.6/_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/sidebar.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 Python 3.6.8 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="关于这些文档" href="../about.html" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="copyright" title="版权所有" href="../copyright.html" />
+    <link rel="next" title="25.1. tkinter — Tcl/Tk的Python接口" href="tkinter.html" />
+    <link rel="prev" title="24.3. shlex — Simple lexical analysis" href="shlex.html" />
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    <link rel="canonical" href="https://docs.python.org/3/library/tk.html" />
+    
+    <script type="text/javascript" src="../_static/copybutton.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/copybutton.js"></script>
+    <script type="text/javascript" src="../_static/switchers.js" tppabs="https://docs.python.org/zh-cn/3.6/_static/switchers.js"></script>
+    
+    
+ 
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/genindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/genindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/py-modindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/py-modindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html" title="25.1. tkinter — Tcl/Tk的Python接口"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3.6/library/shlex.html" title="24.3. shlex — Simple lexical analysis"
+             accesskey="P">上一页</a> |</li>
+        <li><img src="../_static/py.png" tppabs="https://docs.python.org/zh-cn/3.6/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm(%27https://www.python.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/%27" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.6.8</span>
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/index.html%27" tppabs="https://docs.python.org/zh-cn/3.6/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3.6/library/index.html" accesskey="U">Python 标准库</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3.6/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="graphical-user-interfaces-with-tk">
+<span id="tkinter"></span><h1>25. Tk图形用户界面(GUI)<a class="headerlink" href="#graphical-user-interfaces-with-tk" title="永久链接至标题">¶</a></h1>
+<p id="index-0">Tcl/Tk集成到Python中已经有一些年头了。Python程序员可以通过 <a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> 包和它的扩展， <a class="reference internal" href="tkinter.tix.html#module-tkinter.tix" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#module-tkinter.tix" title="tkinter.tix: Tk Extension Widgets for Tkinter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.tix</span></code></a> 模块和 <a class="reference internal" href="tkinter.ttk.html#module-tkinter.ttk" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#module-tkinter.ttk" title="tkinter.ttk: Tk themed widget set"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter.ttk</span></code></a> 模块，来使用这套鲁棒的、平台无关的窗口工具集。</p>
+<p><a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> 包使用面向对象的方式对Tcl/Tk进行了一层薄包装。使用 <a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> ，你不需要写Tcl代码，但可能需要参考Tk文档，甚至Tcl文档。 <a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> 使用Python类，对Tk的窗体小部件（Widgets）进行了一系列的封装。除此之外，内部模块 <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code> 针对Python和Tcl之间的交互，提供了一套线程安全的机制。</p>
+<p><a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> 最大的优点就一个字：快，再一个，是Python自带的。尽管官方文档不太完整，但有其他资源可以参考，比如Tk手册，教程等。 <a class="reference internal" href="tkinter.html#module-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#module-tkinter" title="tkinter: Interface to Tcl/Tk for graphical user interfaces"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter</span></code></a> 也以比较过时的外观为人所知，但在Tk 8.5中，这一点得到了极大的改观。除此之外，如果有兴趣，还有其他的一些GUI库可供使用。更多信息，请参考 <a class="reference internal" href="othergui.html#other-gui-packages" tppabs="https://docs.python.org/zh-cn/3.6/library/othergui.html#other-gui-packages"><span class="std std-ref">其他图形用户界面（GUI）包</span></a>  小节。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html">25.1. <code class="docutils literal notranslate"><span class="pre">tkinter</span></code> — Tcl/Tk的Python接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#tkinter-modules" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#tkinter-modules">25.1.1. Tkinter 模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#tkinter-life-preserver" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#tkinter-life-preserver">25.1.2. Tkinter Life Preserver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#how-to-use-this-section" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#how-to-use-this-section">25.1.2.1. How To Use This Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#a-simple-hello-world-program" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#a-simple-hello-world-program">25.1.2.2. A Simple Hello World Program</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#a-very-quick-look-at-tcl-tk" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#a-very-quick-look-at-tcl-tk">25.1.3. A (Very) Quick Look at Tcl/Tk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#mapping-basic-tk-into-tkinter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#mapping-basic-tk-into-tkinter">25.1.4. Mapping Basic Tk into Tkinter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#how-tk-and-tkinter-are-related" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#how-tk-and-tkinter-are-related">25.1.5. How Tk and Tkinter are Related</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#handy-reference" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#handy-reference">25.1.6. Handy Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#setting-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#setting-options">25.1.6.1. Setting Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#the-packer" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#the-packer">25.1.6.2. The Packer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#packer-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#packer-options">25.1.6.3. Packer Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#coupling-widget-variables" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#coupling-widget-variables">25.1.6.4. Coupling Widget Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#the-window-manager" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#the-window-manager">25.1.6.5. The Window Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#tk-option-data-types" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#tk-option-data-types">25.1.6.6. Tk Option Data Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#bindings-and-events" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#bindings-and-events">25.1.6.7. Bindings and Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#the-index-parameter" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#the-index-parameter">25.1.6.8. The index Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.html#images" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#images">25.1.6.9. Images</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.html#file-handlers" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html#file-handlers">25.1.7. File Handlers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.ttk.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html">25.2. <code class="docutils literal notranslate"><span class="pre">tkinter.ttk</span></code> — Tk themed widgets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#using-ttk" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#using-ttk">25.2.1. Using Ttk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#ttk-widgets" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-widgets">25.2.2. Ttk Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#widget" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#widget">25.2.3. Widget</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#standard-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#standard-options">25.2.3.1. Standard Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#scrollable-widget-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#scrollable-widget-options">25.2.3.2. Scrollable Widget Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#label-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#label-options">25.2.3.3. Label Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#compatibility-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#compatibility-options">25.2.3.4. Compatibility Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#widget-states" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#widget-states">25.2.3.5. Widget States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-widget" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-widget">25.2.3.6. ttk.Widget</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#combobox" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#combobox">25.2.4. Combobox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#options">25.2.4.1. 选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#virtual-events" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#virtual-events">25.2.4.2. Virtual events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-combobox" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-combobox">25.2.4.3. ttk.Combobox</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#notebook" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#notebook">25.2.5. Notebook</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id1" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id1">25.2.5.1. 选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tab-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#tab-options">25.2.5.2. Tab Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tab-identifiers" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#tab-identifiers">25.2.5.3. Tab Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id2" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id2">25.2.5.4. Virtual Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-notebook" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-notebook">25.2.5.5. ttk.Notebook</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#progressbar" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#progressbar">25.2.6. Progressbar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id3" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id3">25.2.6.1. 选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-progressbar" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-progressbar">25.2.6.2. ttk.Progressbar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#separator" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#separator">25.2.7. Separator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id4" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id4">25.2.7.1. 选项</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#sizegrip" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#sizegrip">25.2.8. Sizegrip</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#platform-specific-notes" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#platform-specific-notes">25.2.8.1. Platform-specific notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#bugs" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#bugs">25.2.8.2. Bugs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#treeview" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#treeview">25.2.9. Treeview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id5" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id5">25.2.9.1. 选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#item-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#item-options">25.2.9.2. Item Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#tag-options" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#tag-options">25.2.9.3. Tag Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#column-identifiers" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#column-identifiers">25.2.9.4. Column Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#id6" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#id6">25.2.9.5. Virtual Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#ttk-treeview" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-treeview">25.2.9.6. ttk.Treeview</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.ttk.html#ttk-styling" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#ttk-styling">25.2.10. Ttk Styling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.ttk.html#layouts" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.ttk.html#layouts">25.2.10.1. Layouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.tix.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html">25.3. <code class="docutils literal notranslate"><span class="pre">tkinter.tix</span></code> — Extension widgets for Tk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#using-tix" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#using-tix">25.3.1. Using Tix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#tix-widgets" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#tix-widgets">25.3.2. Tix Widgets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#basic-widgets" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#basic-widgets">25.3.2.1. Basic Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#file-selectors" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#file-selectors">25.3.2.2. File Selectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#hierarchical-listbox" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#hierarchical-listbox">25.3.2.3. Hierarchical ListBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#tabular-listbox" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#tabular-listbox">25.3.2.4. Tabular ListBox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#manager-widgets" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#manager-widgets">25.3.2.5. Manager Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#image-types" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#image-types">25.3.2.6. Image Types</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#miscellaneous-widgets" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#miscellaneous-widgets">25.3.2.7. Miscellaneous Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tkinter.tix.html#form-geometry-manager" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#form-geometry-manager">25.3.2.8. Form Geometry Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tkinter.tix.html#tix-commands" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.tix.html#tix-commands">25.3.3. Tix Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tkinter.scrolledtext.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.scrolledtext.html">25.4. <code class="docutils literal notranslate"><span class="pre">tkinter.scrolledtext</span></code> — 滚动文字控件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="idle.html" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html">25.5. IDLE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#menus" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#menus">25.5.1. 目录</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#file-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#file-menu-shell-and-editor">25.5.1.1. 文件目录 （命令行和编辑器）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#edit-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#edit-menu-shell-and-editor">25.5.1.2. 编辑目录（命令行和编辑器）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#format-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#format-menu-editor-window-only">25.5.1.3. Format menu (Editor window only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#run-menu-editor-window-only" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#run-menu-editor-window-only">25.5.1.4. Run menu (Editor window only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#shell-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#shell-menu-shell-window-only">25.5.1.5. Shell menu (Shell window only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#debug-menu-shell-window-only" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#debug-menu-shell-window-only">25.5.1.6. Debug menu (Shell window only)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#options-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#options-menu-shell-and-editor">25.5.1.7. Options menu (Shell and Editor)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#window-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#window-menu-shell-and-editor">25.5.1.8. Window menu (Shell and Editor)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#help-menu-shell-and-editor" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#help-menu-shell-and-editor">25.5.1.9. Help menu (Shell and Editor)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#context-menus" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#context-menus">25.5.1.10. Context Menus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#editing-and-navigation" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#editing-and-navigation">25.5.2. Editing and navigation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#editor-windows" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#editor-windows">25.5.2.1. Editor windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#key-bindings" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#key-bindings">25.5.2.2. Key bindings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#automatic-indentation" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#automatic-indentation">25.5.2.3. Automatic indentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#completions" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#completions">25.5.2.4. Completions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#calltips" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#calltips">25.5.2.5. Calltips</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#python-shell-window" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#python-shell-window">25.5.2.6. Python Shell window</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#text-colors" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#text-colors">25.5.2.7. Text colors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#startup-and-code-execution" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#startup-and-code-execution">25.5.3. Startup and code execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#command-line-usage" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#command-line-usage">25.5.3.1. Command line usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#startup-failure" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#startup-failure">25.5.3.2. Startup failure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#running-user-code" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#running-user-code">25.5.3.3. Running user code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#user-output-in-shell" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#user-output-in-shell">25.5.3.4. User output in Shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#developing-tkinter-applications" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#developing-tkinter-applications">25.5.3.5. Developing tkinter applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#running-without-a-subprocess" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#running-without-a-subprocess">25.5.3.6. Running without a subprocess</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="idle.html#help-and-preferences" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#help-and-preferences">25.5.4. Help and preferences</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#help-sources" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#help-sources">25.5.4.1. Help sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#setting-preferences" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#setting-preferences">25.5.4.2. Setting preferences</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#idle-on-macos" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#idle-on-macos">25.5.4.3. IDLE on macOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="idle.html#extensions" tppabs="https://docs.python.org/zh-cn/3.6/library/idle.html#extensions">25.5.4.4. Extensions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="othergui.html" tppabs="https://docs.python.org/zh-cn/3.6/library/othergui.html">25.6. 其他图形用户界面（GUI）包</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3.6/library/shlex.html"
+                        title="上一章">24.3. <code class="docutils literal notranslate"><span class="pre">shlex</span></code> — Simple lexical analysis</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html"
+                        title="下一章">25.1. <code class="docutils literal notranslate"><span class="pre">tkinter</span></code> — Tcl/Tk的Python接口</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/bugs.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/bugs.html%27" tppabs="https://docs.python.org/zh-cn/3.6/bugs.html">提交 Bug</a></li>
+      <li>
+        <a href="javascript:if(confirm(%27https://github.com/python/cpython/blob/3.6/Doc/library/tk.rst  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://github.com/python/cpython/blob/3.6/Doc/library/tk.rst%27" tppabs="https://github.com/python/cpython/blob/3.6/Doc/library/tk.rst"
+            rel="nofollow">显示源代码
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/genindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/genindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/py-modindex.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/py-modindex.html%27" tppabs="https://docs.python.org/zh-cn/3.6/py-modindex.html" title="Python 模块索引"
+             >模块</a> |</li>
+        <li class="right" >
+          <a href="tkinter.html" tppabs="https://docs.python.org/zh-cn/3.6/library/tkinter.html" title="25.1. tkinter — Tcl/Tk的Python接口"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="shlex.html" tppabs="https://docs.python.org/zh-cn/3.6/library/shlex.html" title="24.3. shlex — Simple lexical analysis"
+             >上一页</a> |</li>
+        <li><img src="../_static/py.png" tppabs="https://docs.python.org/zh-cn/3.6/_static/py.png" alt=""
+                 style="vertical-align: middle; margin-top: -1px"/></li>
+        <li><a href="javascript:if(confirm(%27https://www.python.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/%27" tppabs="https://www.python.org/">Python</a> &#187;</li>
+        <li>
+          <span class="language_switcher_placeholder">zh_CN</span>
+          <span class="version_switcher_placeholder">3.6.8</span>
+          <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/index.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/index.html%27" tppabs="https://docs.python.org/zh-cn/3.6/index.html">文档</a> &#187;
+        </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" tppabs="https://docs.python.org/zh-cn/3.6/library/index.html" >Python 标准库</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="https://docs.python.org/zh-cn/3.6/search.html" method="get">
+          <input placeholder="快速搜索" type="text" name="q" />
+          <input type="submit" value="转向" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/copyright.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/copyright.html%27" tppabs="https://docs.python.org/zh-cn/3.6/copyright.html">版权所有</a> 2001-2019, Python Software Foundation.
+    <br />
+    Python 软件基金会是一个非盈利组织。
+    <a href="javascript:if(confirm(%27https://www.python.org/psf/donations/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://www.python.org/psf/donations/%27" tppabs="https://www.python.org/psf/donations/">请捐助。</a>
+    <br />
+    最后更新于 5月 17, 2019.
+    <a href="javascript:if(confirm(%27https://docs.python.org/zh-cn/3.6/bugs.html  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27https://docs.python.org/zh-cn/3.6/bugs.html%27" tppabs="https://docs.python.org/zh-cn/3.6/bugs.html">发现了问题</a>？
+    <br />
+    使用<a href="javascript:if(confirm(%27http://sphinx.pocoo.org/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://sphinx.pocoo.org/%27" tppabs="http://sphinx.pocoo.org/">Sphinx</a>1.8.4 创建。
+    </div>
+
+  </body>
+</html>

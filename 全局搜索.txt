@@ -1,0 +1,13 @@
+VScode 全局搜索功能
+2018年05月23日 10:06:20 meiger 阅读数：40112
+ 版权声明： https://blog.csdn.net/u012529163/article/details/80415572
+最近知道到VScode这个软件，开始试用，总体感觉很不错，就是不能全局搜索，经过了解，是我的配置问题，上网找到了一个解决办法，
+
+在配置文件添加：
+
+“search.exclude”: { 
+“system/”: true, 
+“!/system/*/.ps*”: true 
+}， 
+现在测试一下吧， 
+ctrl + shift +F，开始你的表演吧。

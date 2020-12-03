@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>end - C++ Reference</title>
+<link rel="canonical" href="http://www.cplusplus.com/reference/iterator/end/">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="../../../v321/main.css" tppabs="http://www.cplusplus.com/v321/main.css">
+<script src="../../../v321/main.js" tppabs="http://www.cplusplus.com/v321/main.js" type="text/javascript"></script>
+<script>
+  (function() {
+    var useSSL = 'https:' == document.location.protocol;
+    var src = (useSSL ? 'https:' : 'http:') +
+        '//www.googletagservices.com/tag/js/gpt.js';
+    document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  })();
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/32882001/L', [728, 90], 'div-gpt-ad-1473193443042-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().enableSyncRendering();
+    googletag.enableServices();
+  });
+</script>
+</head>
+<body>
+<div id="I_top">
+<div id="I_header">
+<div id="I_logo"><a href="javascript:if(confirm(%27http://www.cplusplus.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/%27" tppabs="http://www.cplusplus.com/" title="cplusplus.com"><div></div></a></div>
+<div id="I_search">
+<form id="search" action="javascript:if(confirm(%27http://www.cplusplus.com/search.do?q=Go  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/search.do?q=Go%27" tppabs="http://www.cplusplus.com/search.do?q=Go" method="get">
+Search: <input name="q" size="20" class="txt"> <input type="submit" value="Go" class="btn">
+</form>
+</div>
+<div id="I_bar">
+<ul>
+<li><a href="../../index.htm" tppabs="http://www.cplusplus.com/reference/">Reference</a></li>
+<li><a href="../index.htm" tppabs="http://www.cplusplus.com/reference/iterator/">&lt;iterator&gt;</a></li>
+<li class="here">end</li>
+</ul>
+</div>
+<div id="I_user" class="C_LoginBox"><span title="ajax"></span></div>
+</div>
+</div>
+<div id="I_mid">
+<div id="I_wrap">
+<div id="I_minheight"></div>
+<div id="I_main">
+<div class="C_support">
+<div id='div-gpt-ad-1473193443042-0' style='height:90px; width:728px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1473193443042-0'); });
+</script>
+</div>
+</div>
+<div id="I_content">
+<div class="C_doc">
+<div id="I_type">function template</div>
+<div id="I_file">&lt;iterator&gt; &lt;array&gt; &lt;deque&gt; &lt;forward_list&gt; &lt;list&gt; &lt;map&gt; &lt;regex&gt; &lt;set&gt; &lt;string&gt; &lt;unordered_map&gt; &lt;unordered_set&gt; &lt;vector&gt;</div>
+<h1><span class="namespace" title="namespace std">std::</span>end<span class="C_ico cpp11warning" title="This page describes a feature introduced by the latest revision of the C++ standard (2011). Older compilers may not support it." alt="This page describes a feature introduced by the latest revision of the C++ standard (2011). Older compilers may not support it."></span></h1>
+<div class="C_prototype"><div class="C_SwitchCases">
+<div title="C++11">
+<table><tr class="odd"><th>container (1)</th><td><pre>template &lt;class Container&gt;  auto end (Container&amp; cont) -&gt; decltype (cont.end());template &lt;class Container&gt;  auto end (const Container&amp; cont) -&gt; decltype (cont.end());</pre></td></tr><tr class="even"><th>array (2)</th><td><pre>template &lt;class T, size_t N&gt;  T* end (T(&amp;arr)[N]);</pre></td></tr></table></div>
+<div title="C++14" class="off">
+<table><tr class="odd"><th>container (1)</th><td><pre>template &lt;class Container&gt;  auto end (Container&amp; cont) -&gt; decltype (cont.end());template &lt;class Container&gt;  auto end (const Container&amp; cont) -&gt; decltype (cont.end());</pre></td></tr><tr class="even"><th>array (2)</th><td><pre>template &lt;class T, size_t N&gt;  constexpr T* end (T(&amp;arr)[N]) noexcept;</pre></td></tr></table></div>
+</div>
+</div><div id="I_description">Iterator to end</div>
+<section id="description">
+Returns an iterator pointing to the <i>past-the-end</i> element in the sequence:<br>
+<br>
+<dl>
+<dt>(1) Container</dt>
+<dd>The function returns <code>cont.end()</code>.</dd>
+<dt>(2) Array</dt>
+<dd>The function returns <code>arr+N</code>.</dd>
+</dl>
+<br>
+If the sequence is <i>empty</i>, the returned value compares equal to the one returned by <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/begin  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/begin%27" tppabs="http://www.cplusplus.com/begin">begin</a></samp> with the same argument.<br>
+<br>
+These function templates are defined in multiple headers: Each of these headers includes the generic templates for all container and array types and not simply a specific overload. The headers are: <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<iterator>  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<iterator>%27" tppabs="http://www.cplusplus.com/<iterator>">&lt;iterator&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<array>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<array>%27" tppabs="http://www.cplusplus.com/<array>">&lt;array&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<deque>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<deque>%27" tppabs="http://www.cplusplus.com/<deque>">&lt;deque&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<forward_list>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<forward_list>%27" tppabs="http://www.cplusplus.com/<forward_list>">&lt;forward_list&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<list>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<list>%27" tppabs="http://www.cplusplus.com/<list>">&lt;list&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<map>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<map>%27" tppabs="http://www.cplusplus.com/<map>">map</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<regex>  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<regex>%27" tppabs="http://www.cplusplus.com/<regex>">&lt;regex&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<set>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<set>%27" tppabs="http://www.cplusplus.com/<set>">&lt;set&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<string>  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<string>%27" tppabs="http://www.cplusplus.com/<string>">&lt;string&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<unordered_map>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<unordered_map>%27" tppabs="http://www.cplusplus.com/<unordered_map>">&lt;unordered_map&gt;</a></samp>, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<unordered_set>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<unordered_set>%27" tppabs="http://www.cplusplus.com/<unordered_set>">&lt;unordered_set&gt;</a></samp> and <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/<vector>  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<vector>%27" tppabs="http://www.cplusplus.com/<vector>">&lt;vector&gt;</a></samp>.<br>
+<br>
+Conversely, <samp><a href="javascript:if(confirm(%27http://www.cplusplus.com/end  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/end%27" tppabs="http://www.cplusplus.com/end">end</a></samp> is overloaded (with a different definition) in headers <code><a href="javascript:if(confirm(%27http://www.cplusplus.com/<initializer_list>  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<initializer_list>%27" tppabs="http://www.cplusplus.com/<initializer_list>">&lt;initializer_list&gt;</a></code> and <code><a href="javascript:if(confirm(%27http://www.cplusplus.com/<valarray>  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/<valarray>%27" tppabs="http://www.cplusplus.com/<valarray>">&lt;valarray&gt;</a></code>.<br>
+</section>
+<br>
+<section id="parameters">
+<h3>Parameters</h3>
+<dl>
+<dt>cont</dt>
+<dd>An object of a class type for which member <samp>end</samp> is defined.</dd>
+<dt>arr</dt>
+<dd>An array.</dd>
+</dl>
+</section>
+<br>
+<section id="return">
+<h3>Return Value</h3>
+For <i>(1)</i>, the same as returned by <samp>cont.end()</samp>.<br>
+For <i>(2)</i>, a pointer to the element that would follow the last element in the array.<br>
+</section>
+<br>
+<section id="example">
+<h3>Example</h3>
+<div class="auto"><table class="snippet"><tr><td class="rownum"><pre><code>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br></code></pre></td>
+<td class="source"><pre><code><cite>// std::begin / std::end example</cite>
+<dfn>#include &lt;iostream&gt;     </dfn><cite>// std::cout</cite>
+<dfn>#include &lt;vector&gt;       </dfn><cite>// std::vector, std::begin, std::end</cite>
+
+<var>int</var> main () {
+  <var>int</var> foo[] = {10,20,30,40,50};
+  std::vector&lt;<var>int</var>&gt; bar;
+
+  <cite>// iterate foo: inserting into bar</cite>
+  <var>for</var> (<var>auto</var> it = std::begin(foo); it!=std::end(foo); ++it)
+    bar.push_back(*it);
+
+  <cite>// iterate bar: print contents:</cite>
+  std::cout &lt;&lt; <kbd>"bar contains:"</kbd>;
+  <var>for</var> (<var>auto</var> it = std::begin(bar); it!=std::end(bar); ++it)
+    std::cout &lt;&lt; <kbd>' '</kbd> &lt;&lt; *it;
+  std::cout &lt;&lt; <kbd>'\n'</kbd>;
+
+  <var>return</var> 0;
+}</code></pre></td><td class="C_btnholder"></td></tr></table></div>
+<br>
+<br>
+Output:<br>
+<div class="auto"><table class="snippet"><tr><td class="output"><pre><samp>bar contains: 10 20 30 40 50
+</samp></pre></td></tr></table></div>
+</section>
+<br>
+<section id="access">
+<h3>Data races</h3>
+The argument is accessed but not modified.<br>
+None of the elements in the sequence are accessed by the call, but the iterator returned can be used to access or modify them.<br>
+</section>
+<br>
+<section id="exceptions">
+<h3>Exception safety</h3>
+Provides the same level of guarantees as the operation performed on the argument (for standard containers and arrays this is a no-throw guarantee).<br>
+</section>
+<br>
+<section id="see">
+<h3>See also</h3>
+<dl class="links"><dt><a href= "../begin/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/begin/"><b>begin</b></a></dt><dd>Iterator to beginning <span class="typ">(function template)</span></dd></dl>
+</section></div><div id="CH_bb"></div></div>
+</div>
+<div id="I_nav">
+<div class="sect root">
+<h3><b><a href="javascript:if(confirm(%27http://www.cplusplus.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/%27" tppabs="http://www.cplusplus.com/">C++</a></b></h3>
+<ul>
+<li class="folder info"><a href="javascript:if(confirm(%27http://www.cplusplus.com/info/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/info/%27" tppabs="http://www.cplusplus.com/info/">Information</a></li>
+<li class="folder doc"><a href="javascript:if(confirm(%27http://www.cplusplus.com/doc/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/doc/%27" tppabs="http://www.cplusplus.com/doc/">Tutorials</a></li>
+<li class="folder selected reference"><a href="../../index.htm" tppabs="http://www.cplusplus.com/reference/">Reference</a></li>
+<li class="folder articles"><a href="javascript:if(confirm(%27http://www.cplusplus.com/articles/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/articles/%27" tppabs="http://www.cplusplus.com/articles/">Articles</a></li>
+<li class="folder forum"><a href="javascript:if(confirm(%27http://www.cplusplus.com/forum/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/forum/%27" tppabs="http://www.cplusplus.com/forum/">Forum</a></li>
+</ul>
+</div>
+<div class="C_BoxLabels C_BoxSort sect" id="reference_box">
+<h3><b><a href="../../index.htm" tppabs="http://www.cplusplus.com/reference/">Reference</a></b></h3>
+<ul>
+<li class="C_Collapsable collapsed"><h4><a href="../../clibrary/index.htm" tppabs="http://www.cplusplus.com/reference/clibrary/">C library:</a></h4><ul>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cassert/index.htm" tppabs="http://www.cplusplus.com/reference/cassert/"><span>&lt;cassert&gt; (assert.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cctype/index.htm" tppabs="http://www.cplusplus.com/reference/cctype/"><span>&lt;cctype&gt; (ctype.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cerrno/index.htm" tppabs="http://www.cplusplus.com/reference/cerrno/"><span>&lt;cerrno&gt; (errno.h)</span></a></li>
+<li class="c99 cpp11 folder"><a href="../../cfenv/index.htm" tppabs="http://www.cplusplus.com/reference/cfenv/"><span>&lt;cfenv&gt; (fenv.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cfloat/index.htm" tppabs="http://www.cplusplus.com/reference/cfloat/"><span>&lt;cfloat&gt; (float.h)</span></a></li>
+<li class="c99 cpp11 folder"><a href="../../cinttypes/index.htm" tppabs="http://www.cplusplus.com/reference/cinttypes/"><span>&lt;cinttypes&gt; (inttypes.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../ciso646/index.htm" tppabs="http://www.cplusplus.com/reference/ciso646/"><span>&lt;ciso646&gt; (iso646.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../climits/index.htm" tppabs="http://www.cplusplus.com/reference/climits/"><span>&lt;climits&gt; (limits.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../clocale/index.htm" tppabs="http://www.cplusplus.com/reference/clocale/"><span>&lt;clocale&gt; (locale.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cmath/index.htm" tppabs="http://www.cplusplus.com/reference/cmath/"><span>&lt;cmath&gt; (math.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../csetjmp/index.htm" tppabs="http://www.cplusplus.com/reference/csetjmp/"><span>&lt;csetjmp&gt; (setjmp.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../csignal/index.htm" tppabs="http://www.cplusplus.com/reference/csignal/"><span>&lt;csignal&gt; (signal.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cstdarg/index.htm" tppabs="http://www.cplusplus.com/reference/cstdarg/"><span>&lt;cstdarg&gt; (stdarg.h)</span></a></li>
+<li class="cpp11 folder"><a href="../../cstdbool/index.htm" tppabs="http://www.cplusplus.com/reference/cstdbool/"><span>&lt;cstdbool&gt; (stdbool.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cstddef/index.htm" tppabs="http://www.cplusplus.com/reference/cstddef/"><span>&lt;cstddef&gt; (stddef.h)</span></a></li>
+<li class="c99 cpp11 folder"><a href="../../cstdint/index.htm" tppabs="http://www.cplusplus.com/reference/cstdint/"><span>&lt;cstdint&gt; (stdint.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cstdio/index.htm" tppabs="http://www.cplusplus.com/reference/cstdio/"><span>&lt;cstdio&gt; (stdio.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cstdlib/index.htm" tppabs="http://www.cplusplus.com/reference/cstdlib/"><span>&lt;cstdlib&gt; (stdlib.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cstring/index.htm" tppabs="http://www.cplusplus.com/reference/cstring/"><span>&lt;cstring&gt; (string.h)</span></a></li>
+<li class="c99 cpp11 folder"><a href="../../ctgmath/index.htm" tppabs="http://www.cplusplus.com/reference/ctgmath/"><span>&lt;ctgmath&gt; (tgmath.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../ctime/index.htm" tppabs="http://www.cplusplus.com/reference/ctime/"><span>&lt;ctime&gt; (time.h)</span></a></li>
+<li class="cpp11 folder"><a href="../../cuchar/index.htm" tppabs="http://www.cplusplus.com/reference/cuchar/"><span>&lt;cuchar&gt; (uchar.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cwchar/index.htm" tppabs="http://www.cplusplus.com/reference/cwchar/"><span>&lt;cwchar&gt; (wchar.h)</span></a></li>
+<li class="c90 c99 arm cpp98 cpp11 folder"><a href="../../cwctype/index.htm" tppabs="http://www.cplusplus.com/reference/cwctype/"><span>&lt;cwctype&gt; (wctype.h)</span></a></li>
+</ul></li>
+<li class="C_Collapsable collapsed"><h4><a href="../../stl/index.htm" tppabs="http://www.cplusplus.com/reference/stl/">Containers:</a></h4><ul>
+<li class="cpp11 folder"><a href="../../array/index.htm" tppabs="http://www.cplusplus.com/reference/array/"><span>&lt;array&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../deque/index.htm" tppabs="http://www.cplusplus.com/reference/deque/"><span>&lt;deque&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../forward_list/index.htm" tppabs="http://www.cplusplus.com/reference/forward_list/"><span>&lt;forward_list&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../list/index.htm" tppabs="http://www.cplusplus.com/reference/list/"><span>&lt;list&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../map/index.htm" tppabs="http://www.cplusplus.com/reference/map/"><span>&lt;map&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../queue/index.htm" tppabs="http://www.cplusplus.com/reference/queue/"><span>&lt;queue&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../set/index.htm" tppabs="http://www.cplusplus.com/reference/set/"><span>&lt;set&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../stack/index.htm" tppabs="http://www.cplusplus.com/reference/stack/"><span>&lt;stack&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../unordered_map/index.htm" tppabs="http://www.cplusplus.com/reference/unordered_map/"><span>&lt;unordered_map&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../unordered_set/index.htm" tppabs="http://www.cplusplus.com/reference/unordered_set/"><span>&lt;unordered_set&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../vector/index.htm" tppabs="http://www.cplusplus.com/reference/vector/"><span>&lt;vector&gt;</span></a></li>
+</ul></li>
+<li class="C_Collapsable collapsed"><h4><a href="../../iolibrary/index.htm" tppabs="http://www.cplusplus.com/reference/iolibrary/">Input/Output:</a></h4><ul>
+<li class="cpp98 cpp11 folder"><a href="../../fstream/index.htm" tppabs="http://www.cplusplus.com/reference/fstream/"><span>&lt;fstream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../iomanip/index.htm" tppabs="http://www.cplusplus.com/reference/iomanip/"><span>&lt;iomanip&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../ios/index.htm" tppabs="http://www.cplusplus.com/reference/ios/"><span>&lt;ios&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../iosfwd/index.htm" tppabs="http://www.cplusplus.com/reference/iosfwd/"><span>&lt;iosfwd&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../iostream/index.htm" tppabs="http://www.cplusplus.com/reference/iostream/"><span>&lt;iostream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../istream/index.htm" tppabs="http://www.cplusplus.com/reference/istream/"><span>&lt;istream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../ostream/index.htm" tppabs="http://www.cplusplus.com/reference/ostream/"><span>&lt;ostream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../sstream/index.htm" tppabs="http://www.cplusplus.com/reference/sstream/"><span>&lt;sstream&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../streambuf/index.htm" tppabs="http://www.cplusplus.com/reference/streambuf/"><span>&lt;streambuf&gt;</span></a></li>
+</ul></li>
+<li class="C_Collapsable collapsed"><h4><a href="../../multithreading/index.htm" tppabs="http://www.cplusplus.com/reference/multithreading/">Multi-threading:</a></h4><ul>
+<li class="cpp11 folder"><a href="../../atomic/index.htm" tppabs="http://www.cplusplus.com/reference/atomic/"><span>&lt;atomic&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../condition_variable/index.htm" tppabs="http://www.cplusplus.com/reference/condition_variable/"><span>&lt;condition_variable&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../future/index.htm" tppabs="http://www.cplusplus.com/reference/future/"><span>&lt;future&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../mutex/index.htm" tppabs="http://www.cplusplus.com/reference/mutex/"><span>&lt;mutex&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../thread/index.htm" tppabs="http://www.cplusplus.com/reference/thread/"><span>&lt;thread&gt;</span></a></li>
+</ul></li>
+<li class="C_Collapsable"><h4><a href="../../std/index.htm" tppabs="http://www.cplusplus.com/reference/std/">Other:</a></h4><ul>
+<li class="cpp98 cpp11 folder"><a href="../../algorithm/index.htm" tppabs="http://www.cplusplus.com/reference/algorithm/"><span>&lt;algorithm&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../bitset/index.htm" tppabs="http://www.cplusplus.com/reference/bitset/"><span>&lt;bitset&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../chrono/index.htm" tppabs="http://www.cplusplus.com/reference/chrono/"><span>&lt;chrono&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../codecvt/index.htm" tppabs="http://www.cplusplus.com/reference/codecvt/"><span>&lt;codecvt&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../complex/index.htm" tppabs="http://www.cplusplus.com/reference/complex/"><span>&lt;complex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../exception/index.htm" tppabs="http://www.cplusplus.com/reference/exception/"><span>&lt;exception&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../functional/index.htm" tppabs="http://www.cplusplus.com/reference/functional/"><span>&lt;functional&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../initializer_list/index.htm" tppabs="http://www.cplusplus.com/reference/initializer_list/"><span>&lt;initializer_list&gt;</span></a></li>
+<li class="cpp98 cpp11 selected folder"><a href="../index.htm" tppabs="http://www.cplusplus.com/reference/iterator/"><span>&lt;iterator&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../limits/index.htm" tppabs="http://www.cplusplus.com/reference/limits/"><span>&lt;limits&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../locale/index.htm" tppabs="http://www.cplusplus.com/reference/locale/"><span>&lt;locale&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../memory/index.htm" tppabs="http://www.cplusplus.com/reference/memory/"><span>&lt;memory&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../new/index.htm" tppabs="http://www.cplusplus.com/reference/new/"><span>&lt;new&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../numeric/index.htm" tppabs="http://www.cplusplus.com/reference/numeric/"><span>&lt;numeric&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../random/index.htm" tppabs="http://www.cplusplus.com/reference/random/"><span>&lt;random&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../ratio/index.htm" tppabs="http://www.cplusplus.com/reference/ratio/"><span>&lt;ratio&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../regex/index.htm" tppabs="http://www.cplusplus.com/reference/regex/"><span>&lt;regex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../stdexcept/index.htm" tppabs="http://www.cplusplus.com/reference/stdexcept/"><span>&lt;stdexcept&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../string/index.htm" tppabs="http://www.cplusplus.com/reference/string/"><span>&lt;string&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../system_error/index.htm" tppabs="http://www.cplusplus.com/reference/system_error/"><span>&lt;system_error&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../tuple/index.htm" tppabs="http://www.cplusplus.com/reference/tuple/"><span>&lt;tuple&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../typeindex/index.htm" tppabs="http://www.cplusplus.com/reference/typeindex/"><span>&lt;typeindex&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../typeinfo/index.htm" tppabs="http://www.cplusplus.com/reference/typeinfo/"><span>&lt;typeinfo&gt;</span></a></li>
+<li class="cpp11 folder"><a href="../../type_traits/index.htm" tppabs="http://www.cplusplus.com/reference/type_traits/"><span>&lt;type_traits&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../utility/index.htm" tppabs="http://www.cplusplus.com/reference/utility/"><span>&lt;utility&gt;</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../../valarray/index.htm" tppabs="http://www.cplusplus.com/reference/valarray/"><span>&lt;valarray&gt;</span></a></li>
+</ul></li>
+</ul>
+</div>
+<div class="C_BoxLabels C_BoxSort sect cpp98 cpp11" id="iterator_box">
+<h3><b><a href="../index.htm" tppabs="http://www.cplusplus.com/reference/iterator/">&lt;iterator&gt;</a></b></h3>
+<ul>
+<li class="cpp98 cpp11"><a href="../iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/iterator/"><span>iterator</span></a></li>
+<li class="cpp98 cpp11"><a href="../iterator_traits/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/iterator_traits/"><span>iterator_traits</span></a></li>
+<li class="C_Collapsable"><h4>functions:</h4><ul>
+<li class="cpp98 cpp11"><a href="../advance/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/advance/"><span>advance</span></a></li>
+<li class="cpp98 cpp11"><a href="../back_inserter/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/back_inserter/"><span>back_inserter</span></a></li>
+<li class="cpp11"><a href="../begin/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/begin/"><span>begin</span></a></li>
+<li class="cpp98 cpp11"><a href="../distance/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/distance/"><span>distance</span></a></li>
+<li class="cpp11 selected"><a href="index.htm" tppabs="http://www.cplusplus.com/reference/iterator/end/"><span>end</span></a></li>
+<li class="cpp98 cpp11"><a href="../front_inserter/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/front_inserter/"><span>front_inserter</span></a></li>
+<li class="cpp98 cpp11"><a href="../inserter/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/inserter/"><span>inserter</span></a></li>
+<li class="cpp11"><a href="../make_move_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/make_move_iterator/"><span>make_move_iterator</span></a></li>
+<li class="cpp11"><a href="../next/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/next/"><span>next</span></a></li>
+<li class="cpp11"><a href="../prev/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/prev/"><span>prev</span></a></li>
+</ul></li>
+<li class="C_Collapsable"><h4>iterator categories:</h4><ul>
+<li class="cpp98 cpp11"><a href="../BidirectionalIterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/BidirectionalIterator/"><span>bidirectional_iterator_tag</span></a></li>
+<li class="cpp98 cpp11"><a href="../ForwardIterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/ForwardIterator/"><span>forward_iterator_tag</span></a></li>
+<li class="cpp98 cpp11"><a href="../InputIterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/InputIterator/"><span>input_iterator_tag</span></a></li>
+<li class="cpp98 cpp11"><a href="../OutputIterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/OutputIterator/"><span>output_iterator_tag</span></a></li>
+<li class="cpp98 cpp11"><a href="../RandomAccessIterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/RandomAccessIterator/"><span>random_access_iterator_tag</span></a></li>
+</ul></li>
+<li class="C_Collapsable"><h4>predefined iterators:</h4><ul>
+<li class="cpp98 cpp11"><a href="../back_insert_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/back_insert_iterator/"><span>back_insert_iterator</span></a></li>
+<li class="cpp98 cpp11"><a href="../front_insert_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/front_insert_iterator/"><span>front_insert_iterator</span></a></li>
+<li class="cpp98 cpp11"><a href="../insert_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/insert_iterator/"><span>insert_iterator</span></a></li>
+<li class="cpp98 cpp11"><a href="../istreambuf_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/istreambuf_iterator/"><span>istreambuf_iterator</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../istream_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/istream_iterator/"><span>istream_iterator</span></a></li>
+<li class="cpp11 folder"><a href="../move_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/move_iterator/"><span>move_iterator</span></a></li>
+<li class="cpp98 cpp11"><a href="../ostreambuf_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/ostreambuf_iterator/"><span>ostreambuf_iterator</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../ostream_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/ostream_iterator/"><span>ostream_iterator</span></a></li>
+<li class="cpp98 cpp11 folder"><a href="../reverse_iterator/index.htm" tppabs="http://www.cplusplus.com/reference/iterator/reverse_iterator/"><span>reverse_iterator</span></a></li>
+</ul></li>
+</ul>
+</div>
+<div id="I_subnav"></div>
+<div class="C_ad234">
+<script async src="../../../../pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" tppabs="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- leftbutton -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:234px;height:60px"
+     data-ad-client="ca-pub-1444228343479937"
+     data-ad-slot="3817422056"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>			
+</div></div>
+<div id="I_midclear"></div>
+</div>
+</div>
+<div id="I_bottom">
+<div id="I_footer">
+	<a href="javascript:if(confirm(%27http://www.cplusplus.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/%27" tppabs="http://www.cplusplus.com/">Home page</a> | <a href="javascript:if(confirm(%27http://www.cplusplus.com/privacy.do  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/privacy.do%27" tppabs="http://www.cplusplus.com/privacy.do">Privacy policy</a><br>&copy; cplusplus.com, 2000-2019 - All rights reserved - <i>v3.1</i><br><a href="javascript:if(confirm(%27http://www.cplusplus.com/contact.do?referrer=www.cplusplus.com%2Freference%2Fiterator%2Fend%2F  \n\nThis file was not retrieved by Teleport Ultra, because it is linked too far away from its Starting Address. If you increase the in-domain depth setting for the Starting Address, this file will be queued for retrieval.  \n\nDo you want to open it from the server?%27))window.location=%27http://www.cplusplus.com/contact.do?referrer=www.cplusplus.com%2Freference%2Fiterator%2Fend%2F%27" tppabs="http://www.cplusplus.com/contact.do?referrer=www.cplusplus.com%2Freference%2Fiterator%2Fend%2F">Spotted an error? contact us</a>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+ onSession ( function(us) {
+		el=document.getElementById('CH_bb'); el.innerHTML='';
+		if (us.auth(4096)) {
+			
+			el.appendChild(btn('Edit Page','Edit Page','edit','http://www.cplusplus.com/reference/edit.cgi?a=iterator+end'));
+			el.appendChild(btn('Delete Page','Delete Page','delete','javascript:docdel()'));
+		}
+	});
+	function docdel() { if (confirm('WARNING: You are about to delete this page. Confirm?')) window.location='http://www.cplusplus.com/reference/delete.cgi?a=iterator+end'; }
+	ready();
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-521783-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www/') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+//-->
+</script>
+
+<script>
+(function(){
+  // mini cookie-consent code (c) Juan Soulie, 2016
+  var s ='consent=cookie';
+  var e = document.createElement('div');
+  e.innerHTML = '<div style="background:#eed;padding:10px;margin:0;text-align:center;border-bottom:1px solid #446"><span style="color:#210;font-weight:bold">This website uses cookies. By continuing, you give permission to deploy cookies, as detailed in our <a href="http://www.cplusplus.com/privacy.do">privacy policy</a>.</span> <span style="margin-left:10px;border-radius:5px;padding:1px 10px;background:#bcd;border:1px solid #789;cursor:pointer">ok</span></div>';
+  if (document.cookie.indexOf(s)!==-1) return;
+  var b = document.getElementsByTagName('body')[0];
+  b.insertBefore(e,b.firstChild);
+  var x = function() { document.cookie = s+'; path=/'; e.parentNode.removeChild(e); };
+  e.addEventListener('click',x);
+  document.addEventListener('scroll',x);
+})();
+</script>
+
+</body>
+</html>

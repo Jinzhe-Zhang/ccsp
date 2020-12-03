@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>菜鸟教程在线编辑器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../static.runoob.com/images/favicon.ico" tppabs="https://static.runoob.com/images/favicon.ico" mce_href="//static.runoob.com/images/favicon.ico" type="image/x-icon" >
+    <link href="../../cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" tppabs="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../../cdn.staticfile.org/codemirror/5.40.2/codemirror.min.js" tppabs="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.js"></script>
+	<link rel="stylesheet" href="../../cdn.staticfile.org/codemirror/5.40.2/codemirror.min.css" tppabs="https://cdn.staticfile.org/codemirror/5.40.2/codemirror.min.css">
+		<script src="../../cdn.staticfile.org/codemirror/5.40.2/mode/python/python.js" tppabs="https://cdn.staticfile.org/codemirror/5.40.2/mode/python/python.js"></script>
+		<!--[if lt IE 9]>
+	<script src="../../cdn.staticfile.org/html5shiv/r29/html5.min.js" tppabs="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<style>
+body{min-height:300px;padding-top:90px;background: #f6f6f6;}.container{width:98%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.CodeMirror{min-height:300px;;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#textareaCode{min-height:300px}#iframeResult{display: block;overflow: hidden;border:0!important;min-width:100px;width:100%;min-height:300px;background-color:#fff}@media screen and (max-width:768px){#textareaCode{height:300px}.CodeMirror{height:300px;font-family: Menlo,Monaco,Consolas,"Andale Mono","lucida console","Courier New",monospace;}#iframeResult{height:300px}.form-inline{padding:6px 0 2px 0}}.logo h1{background-image:url(../images/logo-domain-white.png)/*tpa=https://www.runoob.com/images/logo-domain-white.png*/;background-repeat:no-repeat;text-indent:-9999px;width:160px;height:39px;margin-top:10px;display:block}
+</style>
+<nav class="navbar navbar-default navbar-fixed-top" style="background: #96b97d;">
+  <div class="container">
+    <div class="navbar-header logo"><h1 onClick="window.open('../index.htm'/*tpa=https://www.runoob.com/*/)">RUNOOB.COM</h1>
+    </div>
+  </div>
+</nav>    <div class="container" >
+    <div class="row-fluid">
+    
+    <div class="col-sm-6">
+	<div class="panel panel-default"> 
+		<div class="panel-heading">
+			<form class="form-inline">
+			 <div class="row">
+		            <div class="col-xs-6">
+		                 <button type="button" class="btn btn-default">源代码：</button>
+		              </div>
+		              <div class="col-xs-6 text-right">
+		               <button type="button" class="btn btn-success" id="submitBTN" disabled="disabled"><span class="glyphicon glyphicon-send"></span> 点击运行</button>
+		            </div>
+		        </div>
+				
+			</form>
+		</div>
+		<div class="panel-body">
+			<textarea class="form-control"  id="textareaCode" name="textareaCode">#!/usr/bin/python3
+
+print(&quot;Hello, World!&quot;)
+</textarea>
+		</div>
+	</div>
+	</div>
+
+	<div class="col-sm-6">
+	<div class="panel panel-default"> 
+		<div class="panel-heading"><form class="form-inline"> <button type="button" class="btn btn-default">运行结果</button></form></div>
+		<div class="panel-body"><div id="iframewrapper"><iframe id="iframeResult" class="result_output"  frameborder="0" name="view" width="400"></iframe></div></div>
+	</div>
+	</div>
+	
+	</div>
+	
+	<footer>
+		<div class="row">
+			<div class="col-sm-12"><hr>
+				<p>Copyright © 2013-2019<a target="_blank" href="../index.htm" tppabs="https://www.runoob.com/">菜鸟教程</a></p>
+			</div>
+		</div>
+	</footer>
+</div>
+<script type="text/javascript" src="../../cdn.staticfile.org/jquery/2.1.1/jquery.min.js" tppabs="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script> 
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    lineNumbers: false,
+    matchBrackets: true,
+    mode: "text/x-python",
+    indentUnit: 4,
+    indentWithTabs: true
+});
+
+var ifr = document.createElement("iframe");
+ifr.setAttribute("frameborder", "0");
+ifr.setAttribute("id", "iframeResult");  
+document.getElementById("iframewrapper").innerHTML = "";
+document.getElementById("iframewrapper").appendChild(ifr);
+var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+ifrw.document.open();
+ifrw.document.write("<html><head><\/head><body>Hello, World!<br><\/body><\/html>\n");  
+ifrw.document.close();
+btn = $("#submitBTN");
+editor.on("change",function(editor,change){
+	btn.prop('disabled', false);
+});
+btn.click(function() {
+	btn.prop('disabled', true);
+	code = editor.getValue();
+	runcode = 15;
+	fileext = "py3";
+	loadingdata = '<img src="../static/img/loading.gif"/*tpa=https://www.runoob.com/static/img/loading.gif*/>';
+	ifrw.document.open();
+	ifrw.document.write(loadingdata);  
+	ifrw.document.close();
+	$.post("https://www.runoob.com/api/compile.php",{code:code,language:runcode,fileext:fileext},function(data){
+		text = data.output.replace(/\r\n|\r|\n/g,"<br />")  + data.errors;
+		ifrw.document.open();
+		ifrw.document.write('<pre>' + text + '</pre>');  
+		ifrw.document.close();
+	});
+	setTimeout(function(){
+        btn.prop('disabled', false);
+    }, 10*1000);
+	autodivheight();
+})
+autodivheight();
+window.addEventListener("resize", autodivheight);
+
+function autodivheight(){
+    var winHeight=0;
+    if (window.innerHeight) {
+        winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+        winHeight = document.body.clientHeight;
+    }
+    //通过深入Document内部对body进行检测，获取浏览器窗口高度
+    if (document.documentElement && document.documentElement.clientHeight) {
+        winHeight = document.documentElement.clientHeight;
+    }
+    height = winHeight*0.68
+    editor.setSize('100%', height);
+    document.getElementById("iframeResult").style.height= height +"px";
+}
+
+</script>
+
+<div style="display:none;">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../hm.baidu.com/hm.js-3eec0b7da6548cf07db3bc477ea905ee.js"/*tpa=https://hm.baidu.com/hm.js?3eec0b7da6548cf07db3bc477ea905ee*/;
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script async src="../../www.googletagmanager.com/gtag/js-id=UA-84264393-2.js" tppabs="https://www.googletagmanager.com/gtag/js?id=UA-84264393-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-84264393-2');
+</script>
+
+</div></body>
+</html>
